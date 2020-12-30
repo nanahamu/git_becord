@@ -13,39 +13,35 @@
     
     
     <!--header START-->
-    <head class="header">
+    <header class="header">
       <div class="header-top">
         <h1 class="logo">
-          <a href="/">becord</a>
+          <a href="/" class="header-link">becord</a>
         </h1>
         <div class="devise-nav">
           <% if user_signed_in? %>
             <div class="user-nav">
-              <!--<a href="#">赤ちゃんのニックネーム</a>-->
-              <%= link_to "赤ちゃんのニックネーム", "#" %>
-              <!--<a href="#">ログアウト</a>-->
-              <%= link_to "ログアウト", destroy_user_session_path %>
+              <%= link_to "マイページ", user_path(current_user), class: "header-link" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-link" %>
             </div>
           <% else %>
             <div class="not-user-nav">
-              <%= link_to "新規登録", new_user_registration_path %>
-              <%= link_to "ログイン", new_user_session_path %>
+              <%= link_to "新規登録", new_user_registration_path, class: "header-link" %>
+              <%= link_to "ログイン", new_user_session_path, class: "header-link" %>
             </div>
           <% end %>
         </div>
       </div>
-      <div class="header-bottom">
-        <ul class="global-nav">
-          <%= link_to "栄養メモ", root_path, class: "nav-item" %>
-          <%= link_to "離乳食", home_baby_food_path, class: "nav-item" %>
-            <% if user_signed_in? %>
-              <%= link_to "赤ちゃんのニックネームの食材リスト", foods_path, class: "nav-item" %>
-            <% else %>
-              <%= link_to "このアプリについて", home_about_app_path, class: "nav-item" %>
-            <% end %>
-        </ul>
+      <div class="global-nav">
+        <%= link_to "栄養メモ", root_path, class: "header-link nav-item" %>
+        <%= link_to "離乳食", home_baby_food_path, class: "header-link nav-item" %>
+          <% if user_signed_in? %>
+            <%= link_to "#{current_user.baby_nickname}の食材リスト", foods_path, class: "header-link nav-item" %>
+          <% else %>
+            <%= link_to "このアプリについて", home_about_app_path, class: "header-link nav-item" %>
+          <% end %>
       </div>
-    </head>
+    </header>
     <!--header END-->
     
     
