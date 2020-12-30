@@ -1,12 +1,14 @@
-<%= form_for current_user do |f| %>
-  <h4>登録情報</h4>
-    <%= f.text_field :baby_nickname, placeholder: "お子様のニックネーム" %><br>
-    <%= f.date_select :birthday, use_month_numbers: true,　start_year: 2015, end_year: Time.now.year, default: current_user.birthday %><br>
-    <%= f.label :gender %><br />
-    <%= f.label :男の子  %>
-    <%= f.radio_button :gender, :man%>
-    <%= f.label :女の子  %>
-    <%= f.radio_button :gender, :woman %><br>
-    <%= f.file_field :image, placeholder: "画像アップロード" %><br>
-    <%= f.submit "送信" %>
-<% end %>
+<main class="main">
+  <%= form_for current_user do |f| %>
+    <h3>登録情報</h3>
+      <%= f.text_field :baby_nickname, placeholder: "お子様のニックネーム" %><br>
+      <%= f.date_select :birthday, use_month_numbers: true,　start_year: 2015, end_year: Time.now.year, default: current_user.birthday %><br>
+      <%= f.label :gender %><br />
+      <%= f.label :男の子  %>
+      <%= f.radio_button :gender, :man%>
+      <%= f.label :女の子  %>
+      <%= f.radio_button :gender, :woman %><br>
+      <%= f.file_field :image, placeholder: "画像アップロード" %><br>
+      <%= f.submit "送信" %>
+  <% end %>
+</main>

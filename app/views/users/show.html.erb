@@ -1,10 +1,16 @@
-<h3><%= @user.baby_nickname %>の情報</h3>
-<%= @user.baby_nickname %><br>
-<%= @user.birthday.strftime("%Y年%m月%d日") %><br>
-<%= @user.gender %><br>
-    <% if current_user.image.attached? %>
-        <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div><br>
-    <% else %>
-        <%= image_tag 'cat1.png', class: "image" %><br>
-    <% end %>
-<%= link_to "編集する", edit_user_path(current_user) %>
+<main class="main">
+  <% if current_user == @user %>
+    <h3><%= @user.baby_nickname %>の情報</h3>
+    <%= @user.baby_nickname %><br>
+    <%= @user.birthday.strftime("%Y年%m月%d日") %><br>
+    <%= @user.gender %><br>
+        <% if current_user.image.attached? %>
+            <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div><br>
+        <% else %>
+            <%= image_tag 'cat1.png', class: "image" %><br>
+        <% end %>
+    <%= link_to "編集する", edit_user_path(current_user) %>
+  <% else %>
+      <p>表示できません</p>
+  <% end%>
+</main>
