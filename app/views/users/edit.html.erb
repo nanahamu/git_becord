@@ -1,14 +1,28 @@
 <main class="main">
-  <%= form_for current_user do |f| %>
-    <h3>登録情報</h3>
-      <%= f.text_field :baby_nickname, placeholder: "お子様のニックネーム" %><br>
-      <%= f.date_select :birthday, use_month_numbers: true,　start_year: 2015, end_year: Time.now.year, default: current_user.birthday %><br>
-      <%= f.label :gender %><br />
-      <%= f.label :男の子  %>
-      <%= f.radio_button :gender, :man%>
-      <%= f.label :女の子  %>
-      <%= f.radio_button :gender, :woman %><br>
-      <%= f.file_field :image, placeholder: "画像アップロード" %><br>
-      <%= f.submit "送信" %>
-  <% end %>
+  <div class="user-section">
+    <%= form_for current_user do |f| %>
+      <h1>編集画面</h1>
+      <div class="info">
+        <%= f.label :お子様のニックネーム, class: "title" %><br />
+        <%= f.text_field :baby_nickname, placeholder: "お子様のニックネーム" %>
+      </div>
+      <div class="info">
+        <%= f.label :お子様の誕生日, class: "title" %><br />
+        <%= f.date_select :birthday, use_month_numbers: true,　start_year: 2015, end_year: Time.now.year, default: current_user.birthday %>
+      </div>
+      <div class="info">
+        <%= f.label :お子様の性別, class: "title" %><br />
+        <%= f.radio_button :gender, :man%>
+        <%= f.label :男の子  %>
+        <%= f.radio_button :gender, :woman %>
+        <%= f.label :女の子  %>
+      </div>
+      <div class="info">
+        <%= f.file_field :image, placeholder: "画像アップロード" %>
+      </div>
+      <div class="info">
+        <%= f.submit "編集OK", class: "actions-submit" %>
+      </div>
+    <% end %>
+  </div>
 </main>

@@ -1,3 +1,189 @@
 <main class="main">
-    <h3>栄養メモ</h3>
+  <h1>このアプリについて</h1>
+  <div class="foods-section about-app-section">
+    <p>「becord」は「baby」と「record」を組み合わせた造語です。</p>
+    <p>本アプリbecordで、大切なお子様の記録を残すことで、子育てに役立ててください。</p><br />
+    <p>栄養メモページでは、食材を「炭水化物」、「ビタミン・ミネラル」、「タンパク質」の3つに大別して紹介しています。</p>
+    <p>離乳食の献立を考える際や、食育の際にチェックして、お役立ていただければ幸いです。</p><br />
+    <p>離乳食ページでは、離乳食を進める上でのポイントや注意点などを紹介しています。</p><br />
+    <% if user_signed_in? %>
+      <p>離乳食記録ページでは、お子様の離乳食記録(食べた食材、初めて食べた日、アレルギーの有無)をしていただけます。</p>
+      <p>お子様の離乳食管理にご活用ください。</p>
+    <% else %>
+      <p>ユーザー登録をしていただくと、お子様の離乳食記録(食べた食材、初めて食べた日、アレルギーの有無)が出来るようになります。</p>
+      <p>ぜひ、お子様の離乳食管理にご活用ください。</p>
+    <% end %>
+  </div>
+  
+  <h1>栄養メモ</h1>
+  
+  <div class="foods-section">
+    <h2 class="foods-section-bar">炭水化物</h2>
+    <!--food-cardarea START-->
+    <div class="food-cardarea">
+      <div class="food-card">
+        <h3 class="food-name">米</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2018/02/adpDSC_5934-750x500.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>脳や筋肉のエネルギー源(糖質)</li>
+            <li>タンパク質や脂質よりも素早くエネルギーに変わる</li>
+            <li>消化・吸収がよい</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">じゃがいも</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2019/01/adpDSC_2113-750x500.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>でんぷんで保護されているため加熱してもビタミンCが失われにくい</li>
+            <li>ビタミンCは肌の弾力を保つコラーゲン組織の合成を助ける</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">さつまいも</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2017/09/adpDSC_7654-750x499.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>じゃがいもと同様で加熱してもビタミンCが失われにくい</li>
+            <li>食物繊維がたっぷり</li>
+            <li>皮の色素(アントシアニン)が細胞を老化させる活性酸素を除去</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+    </div>
+    <!--food-cardarea END-->
+  </div>
+  <!--foods-section END-->
+  
+  
+  
+  <div class="foods-section">
+    <h2 class="foods-section-bar">ビタミン・ミネラル</h2>
+    <!--food-cardarea START-->
+    <div class="food-cardarea">
+      <div class="food-card">
+        <h3 class="food-name">かぼちゃ</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2017/09/adpDSC_7422-750x499.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>βカロテン、ビタミンEが豊富で風邪予防やガン予防になる</li>
+            <li>冷え性の解消、肌荒れ防止なども期待できる</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">小松菜</h3>
+        <img src="https://forest17.com/f56/f56m_1151.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>カルシウムが非常に多い</li>
+            <li>豊富なビタミンCやAが風邪予防になる</li>
+            <li>鉄が多く、貧血予防になる</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">白菜</h3>
+        <img src="https://forest17.com/e54/e54m_0433.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>内葉よりも外葉の方がビタミンCが多く含まれる</li>
+            <li>むくみや高血圧予防が期待できるカリウムが含まれる</li>
+            <li>肝臓機能を整えるモリブデンが含まれる</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">いちご</h3>
+        <img src="https://food-foto.jp/free/img/images_big/fd401067.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>8〜10個で1日分のビタミンCがとれる</li>
+            <li>赤い色素(アントシアニン)が肝機能の強化や視力低下を防ぐ</li>
+            <li>赤血球を作る葉酸を含み、貧血や冷え性の改善に役立つ</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">みかん</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2018/12/adpDSC_1795-750x500.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>ビタミンCやAが豊富</li>
+            <li>オレンジの色素(βクリプトキサンチン)は高い抗酸化作用がある</li>
+            <li>白い筋や身の袋に含まれるビタミンPは毛細血管を強化する</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">りんご</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2018/09/adpDSC_1007-750x500.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>ペクチン(水溶性食物繊維)が多く、下痢にも便秘にも効果的</li>
+            <li>下痢のときには腸壁を保護し、便秘の時には便を水分でふやかす</li>
+            <li>多種類のポリフェノールを含み、抗酸化作用が期待できる</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+    </div>
+    <!--food-cardarea END-->
+  </div>
+  <!--foods-section END-->
+  
+  
+  <div class="foods-section">
+    <h2 class="foods-section-bar">たんぱく質</h2>
+    <!--food-cardarea START-->
+    <div class="food-cardarea">
+      <div class="food-card">
+        <h3 class="food-name">豆腐</h3>
+        <img src="https://forest17.com/e51/e51m_7740.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>豆乳ににがりを加えて固めた食品</li>
+            <li>豆乳の上澄みを除いた木綿豆腐の方が、絹ごし豆腐よりもタンパク質が豊富</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">しらす干し</h3>
+        <img src="https://t4.ftcdn.net/jpg/01/04/84/15/240_F_104841572_wPSHcoDDCbpeHvM1Ew2PtoNxtzHQ2aco.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>カルシウム、タンパク質、ビタミンD、ビタミンB12、マグネシウムが豊富</li>
+            <li>低カロリー、高タンパク</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+      <div class="food-card">
+        <h3 class="food-name">卵</h3>
+        <img src="https://free-materials.com/adm/wp-content/uploads/2016/09/adtDSC_2147-750x499.jpg" class="food-img">
+        <div class="food-textarea">
+          <ul>
+            <li>ビタミン、タンパク質が豊富な完全栄養食品</li>
+            <li>ビタミンCと食物繊維以外の栄養素を全て含む</li>
+          </ul>
+          <p class="button">check</p>
+        </div>
+      </div>
+    </div>
+    <!--food-cardarea END-->
+  </div>
+  <!--foods-section END-->
+  <%= javascript_include_tag "home.js" %>
 </main>

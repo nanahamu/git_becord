@@ -1,0 +1,21 @@
+<main class="main">
+  <div class="record-section">
+    <%= form_tag("/records/#{@record.id}", method: :patch) do %>
+      <h1>編集画面</h1>
+      <div class="info">
+        <p class="title">食べた食材</p>
+        <input type="text" name="food" value="<%= @record.food %>" placeholder="(例)白菜">
+      </div>
+      <div class="info">
+        <p class="title">初めて食べた日</p>
+        <input type="date" name="date" value="<%= @record.date %>">
+      </div>
+      <div class="info">
+        <p class="title">アレルギー</p>
+        <input type="radio" name="allergy" value= 0 required >なし
+        <input type="radio" name="allergy" value= 1 >あり
+      </div>
+      <input type="submit" value="編集OK" class="actions-submit" >
+    <% end %>
+  </div>
+</main>

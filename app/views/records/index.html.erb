@@ -1,0 +1,32 @@
+<main class="main">
+  <h1><%= current_user.baby_nickname %>の離乳食記録</h1>
+  <div class="record-section">
+    <table border="1" class="record-table" align="center" cellpadding="5px" bgcolor="#ffffff", bordercolor="#7f5539">
+      <tr align="left">
+        <th>食べた食材</th>
+        <th>初めて食べた日</th>
+        <th>アレルギー</th>
+        <th align="center">編集</th>
+        <th align="center">削除</th>
+      </tr>
+      <% @records.each do |record| %>
+      <% if current_user.id == record.user_id %>
+      <tr align="left">
+        <td><%= record.food %></td>
+        <td><%= record.date.strftime("%Y年%m月%d日")  %></td>
+        <td align="center">
+        <% if record.allergy == 0 %>
+          <p>なし</p>
+        <% else %>
+          <p>あり</p>
+        <% end %>
+        </td>
+        <td align="center"><%= link_to "🖋️", "/records/#{record.id}/edit", class: "record-section-link" %></td>
+        <td align="center"><%= link_to "🧹", "/records/#{record.id}", method: :delete, data: { confirm: '削除しますか？' }, class: "record-section-link" %></td>
+      </tr>
+      <% end %>
+      <% end %>
+    </table>
+    <%= link_to "登録する", new_record_path, class: "actions-submit" %>
+  </div>
+</main>

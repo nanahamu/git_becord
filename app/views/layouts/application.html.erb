@@ -4,7 +4,7 @@
     <title>Becord</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="./css/reset.css" >
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,7 +16,7 @@
     <header class="header">
       <div class="header-top">
         <h1 class="logo">
-          <a href="/" class="header-link">becord</a>
+          <a href="/" class="header-link becord">becord</a>
         </h1>
         <div class="devise-nav">
           <% if user_signed_in? %>
@@ -33,13 +33,11 @@
         </div>
       </div>
       <div class="global-nav">
-        <%= link_to "栄養メモ", root_path, class: "header-link nav-item" %>
+        <%= link_to "栄養メモ", root_path, class: "header-link nav-item"  %>
+        <% if user_signed_in? %>
+          <%= link_to "#{current_user.baby_nickname}の離乳食記録", records_path, class: "header-link nav-item" %>
+        <% end %>
         <%= link_to "離乳食", home_baby_food_path, class: "header-link nav-item" %>
-          <% if user_signed_in? %>
-            <%= link_to "#{current_user.baby_nickname}の食材リスト", foods_path, class: "header-link nav-item" %>
-          <% else %>
-            <%= link_to "このアプリについて", home_about_app_path, class: "header-link nav-item" %>
-          <% end %>
       </div>
     </header>
     <!--header END-->

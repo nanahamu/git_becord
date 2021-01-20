@@ -4,7 +4,4 @@ class HomeController < ApplicationController
     
     def baby_food
     end
-    
-    def about_app
-    end
 end

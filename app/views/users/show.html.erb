@@ -1,16 +1,35 @@
 <main class="main">
   <% if current_user == @user %>
-    <h3><%= @user.baby_nickname %>の情報</h3>
-    <%= @user.baby_nickname %><br>
-    <%= @user.birthday.strftime("%Y年%m月%d日") %><br>
-    <%= @user.gender %><br>
+    <h1><%= @user.baby_nickname %>の情報</h1>
+    <div class="user-section">
+      <div class="info">
+        <p class="title">お子様のニックネーム</p>
+        <%= @user.baby_nickname %>
+      </div>
+      <div class="info">
+        <p class="title">お子様の誕生日</p>
+        <%= @user.birthday.strftime("%Y年%m月%d日") %>
+      </div>
+      <div class="info">
+        <p class="title">お子様の性別</p>
+          <% if @user.gender == "man" %>
+            <p>男の子</p>
+          <% elsif @user.gender == "woman" %>
+            <p>女の子</p>
+          <% end %>
+      </div>
+      <div class="info">
         <% if current_user.image.attached? %>
-            <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div><br>
+          <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
         <% else %>
-            <%= image_tag 'cat1.png', class: "image" %><br>
+          <%= image_tag 'ifn0024.png', class: "image" %>
         <% end %>
-    <%= link_to "編集する", edit_user_path(current_user) %>
+      </div>
+      <div class="info">
+        <%= link_to "編集する", edit_user_path(current_user), class: "actions-submit" %>
+      </div>
+    </div>
   <% else %>
-      <p>表示できません</p>
+    <p>表示できません</p>
   <% end%>
 </main>

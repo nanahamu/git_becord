@@ -3,31 +3,35 @@ body{
 }
 
 .main{
-    padding: 0 100px;
+    padding: 180px 100px 30px 100px;
+}
+.main h1{
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 
-
-// header START
+// header START-------------------------------------------------
 .header{
-    background-color: rgba(204,255,153,0.7);
+    position: fixed;
+    width: 100%;
+    background-color: #13594e;
     padding: 0 100px;
     height: 150px;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.3);
 }
 
 .header-top{
-    // background-color: #faebd7;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0 30px;
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid #d8f3dc;
 }
 
 .global-nav{
-    // background-color: #ff8c00;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -39,7 +43,19 @@ body{
 .header-link{
     text-decoration: none;
     display: inline-block;
+    color: #ffffff;
 }
+
+.becord{
+    color: #c5d86d;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.header-link:hover {
+    color: #aacc00;
+}
+
 
 .user-nav, .not-user-nav{
     display: flex;
@@ -50,15 +66,15 @@ body{
 .header-right-link{
     margin-left: 20px;
 }
-// header END
+// header END-------------------------------------------------
 
 
 
 
 
-// footer START
+// footer START-------------------------------------------------
 .footer{
-    background-color: rgba(204,255,153,0.7);
+    background-color: #e7d8c9;
     padding: 0 100px;
     height: 30px;
     line-height: 30px;
@@ -66,26 +82,308 @@ body{
 
 .copy-right{
     text-align: center;
+    color: #7f5539;
 }
-// footer END
+// footer END-------------------------------------------------
 
 
 
 
-// devise START
+// devise START-------------------------------------------------
+.devise-section{
+    padding: 20px;
+    background-color: #f9dcc4;
+    border-radius: 15px;
+    margin: 0 35%;
+}
+
+.text_field{
+    width: 100%;
+}
+
+.link{
+    color: #495057;
+    display: flex;
+    justify-content: center;
+}
+
+.actions{
+    text-align: center;
+}
+
+.actions-submit{
+    background-color: #8a5a44;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    padding:10px;
+}
+
+.actions-submit:hover{
+    background-color: #faedcd;
+    color: #774936;
+}
+
+.devise-h2{
+    text-align: center;
+    color: #774936;
+    
+}
+
+// devise END-------------------------------------------------
 
 
 
-// devise END
-
-
-
-// users/show START
+// users START-------------------------------------------------
 .image{
     width: 300px;
     height: 300px;
     background-size: cover;
+    display: inline-block;
 }
-// users/show END
+
+.user-section{
+    text-align: center;
+    padding: 30px;
+    background-color: #c6def1;
+    border-radius: 15px;
+    margin: 0 20%;
+}
+
+.title{
+    color: #774936;
+}
+
+.info + .info{
+    margin-top: 20px;
+}
+
+// users END-------------------------------------------------
 
 
+// home START-------------------------------------------------
+.foods-section{
+    text-align: center;
+    padding: 30px;
+    background-color: #95d5b2;
+    border-radius: 15px;
+}
+
+.foods-section-top{
+    background-color: #ccd5ae;
+}
+
+.foods-section p{
+    text-align: left;
+}
+
+.food-cardarea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foods-section-bar{
+    font-size: 25px;
+}
+
+.food-card{
+    width: 30%;
+    background-color: #d8f3dc;
+    margin: 10px;
+    border-radius: 15px;
+    text-align : center;
+}
+
+.food-card h3{
+    text-align : center;
+    margin: 10px 50px;
+    font-size: 20px;
+}
+.food-card p{
+    text-align: left;
+}
+
+
+.food-textarea{
+    margin: 10px 50px;
+}
+
+.food-img{
+    border-radius: 15px;
+    width: 80%;
+}
+
+.foods-section + .foods-section{
+    margin-top: 30px;
+}
+
+
+li::before {
+  position: relative;
+  top: -1px;
+  left: -3px;
+ 
+  display: inline-block;
+ 
+  width: 10px;
+  height: 10px;
+ 
+  content: '';
+ 
+  border-radius: 100%;
+  background: darkturquoise;
+}
+
+.food-textarea ul{
+    text-align: left;
+	text-indent:-0.7em;
+    padding-left:0.7em;
+}
+
+.baby-food-section{
+    text-align: center;
+    padding: 60px;
+    background-color: #fff3b0;
+    border-radius: 15px;
+    margin: 0 15%;
+}
+
+
+.baby-food-section + .baby-food-section{
+    margin-top: 30px;
+}
+
+.baby-food-section-bar{
+    margin-bottom: 3px;
+}
+
+.baby-food-area p, .baby-food-section ul{
+    text-align: left;
+}
+
+.baby-food-section-step{
+    display: flex;
+    justify-content: center;
+}
+
+.baby-food-section-step span{
+    line-height: 100px;
+}
+
+.step{
+    background-color: #f9c74f;
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+
+.step + .step{
+    margin-left: 10px;
+}
+.step p{
+    text-align: center;
+}
+
+.about-app-section{
+    background-color: #ffc8dd;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.baby-food-container{
+    margin: 20px 130px;
+    background-color: #ffee93;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.baby-food-container ul{
+    padding-top: 10px;
+}
+
+.baby-food-container p{
+    text-align: center;
+}
+
+.baby-food-info-area{
+    background-color: #fff3b0;
+}
+
+.baby-food-info{
+    background-color: #ede0d4;
+}
+
+.table td{
+    width: 30%;
+}
+
+
+// home END-------------------------------------------------
+
+
+// records START-------------------------------------------------
+.record-section{
+    text-align: center;
+    padding: 30px;
+    background-color: #ede0d4;
+    border-radius: 15px;
+    margin: 0 20%;
+}
+
+.record-section th{
+    color: #7f5539;
+    background: #e6ccb2;
+}
+
+.record-section .actions-submit{
+    padding: 10px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+}
+
+.record-section-link{
+    color: black;
+}
+
+// records END-------------------------------------------------
+
+
+
+
+// JavaScript START-------------------------------------------------
+.food-textarea .button {
+    text-align:center;
+    padding:10px;
+    color:#fff;
+    width:150px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #2d6a4f;
+    cursor: pointer;
+}
+
+.baby-food-area .button{
+    text-align:center;
+    padding:10px;
+    color:#fff;
+    width:150px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #f3722c;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.button:hover{
+    color: #aacc00;
+}
+
+.close {
+    background-color:#778899;
+}
+
+// JavaScript END-------------------------------------------------
