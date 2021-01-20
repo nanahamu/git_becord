@@ -319,10 +319,6 @@ li::before {
     background-color: #ede0d4;
 }
 
-.table td{
-    width: 30%;
-}
-
 
 // home END-------------------------------------------------
 
@@ -336,6 +332,9 @@ li::before {
     margin: 0 20%;
 }
 
+.record-table{
+    width: 100%;
+}
 .record-section th{
     color: #7f5539;
     background: #e6ccb2;
