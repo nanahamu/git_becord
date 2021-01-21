@@ -29,6 +29,7 @@
       <div class="info">
         <%= link_to "編集する", edit_user_path(current_user), class: "actions-submit" %>
       </div>
+      <%= link_to '退会はこちら', '/users', class: "withdrawal", data: { confirm: "退会するとデータは復元できません。本当によろしいですか?" }, method: :delete %>
     </div>
   <% else %>
     <p>表示できません</p>
