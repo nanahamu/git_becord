@@ -20,7 +20,7 @@
       </div>
       <div class="info">
         <% if current_user.image.attached? %>
-          <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
+          <div class="image" style="background-image: url(<%= rails_blob_path(current_user.image) %>) "></div>
         <% else %>
           <%= image_tag 'ifn0024.png', class: "image" %>
         <% end %>
