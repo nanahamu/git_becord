@@ -50,117 +50,7 @@ body{
 
 @media (max-width: 768px){
     
-    .header{
-        padding: 0 10px;
-    }
     
-    .main{
-        padding: 10px;
-    }
-    
-    .header{
-        height: 80px;
-    }
-    
-    .header-top{
-        height: 40px;
-        // padding: 0 10px;
-        
-    }
-    
-    .global-nav{
-        height: 40px;
-    }
-    // .user-nav, .not-user-nav{
-    //     display: none;
-    // }
-    .header-link{
-        font-size: 15px;
-        line-height: 40px;
-        // display: block;
-    }
-    
-    .logo .becord{
-        font-size: 20px;
-    }
-    
-    // .hum{
-    //     display: block;
-    //     position: fixed;    /* bodyに対しての絶対位置指定 */
-    //     width: 42px;
-    //     height: 40px;
-    //     cursor: pointer;
-    //     z-index: 3;
-    //     right:20px;
-    // }
-    
-    // .hum span{
-    //     display: block;
-    //     position: absolute;
-    //     width: 20px;
-    //     border-bottom: solid 2px #ffffff;
-    //     -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
-    //     -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
-    //     transition: .35s ease-in-out;
-    // }
-    
-    // .hum span:nth-child(1) {
-    //     top: 15px;
-    // }
-    //  .hum span:nth-child(2) {
-    //     top: 20px;
-    // }
-    //  .hum span:nth-child(3) {
-    //     top: 25px;
-    // }
-    // .hum.active span:nth-child(1) {
-    //     top: 20px;
-    // /* 1番目のspanをマイナス45度に */
-    //     -webkit-transform: rotate(-45deg);
-    //     -moz-transform: rotate(-45deg);
-    //     transform: rotate(-45deg);
-    // }
-     
-    // /* 2番目と3番目のspanを45度に */
-    // .hum.active span:nth-child(2){
-    //     top: 20x;
-    //     -webkit-transform: rotate(45deg);
-    //     -moz-transform: rotate(45deg);
-    //     transform: rotate(45deg);
-    // }
-    
-    // .hum.active span:nth-child(3){
-    //     display: none;
-    //     // top: 20px;
-    //     // -webkit-transform: rotate(45deg);
-    //     // -moz-transform: rotate(45deg);
-    //     // transform: rotate(45deg);
-    // }
-    // .devise-nav{
-    //     visibility: hidden;
-    //     // line-height: 80px;
-    //     // padding-right: 20px;
-    //     // padding: 40px 8px 0 8px;
-    //     background-color: RGB(0,153,153,0.6);
-    //     // flex-direction: row;
-    //     // position: relative;
-    //     // height: 80px;
-    //     // padding: 0 1em;
-    //     // display: block;
-        
-    // }
-    
-    
-    
-    // .devise-nav.open {
-    //     -webkit-transform: translateX(0%);
-    //     visibility: visible;
-    //     transform: translateX(0%);/*メニューを元の位置へ戻す*/
-    //     transition: 0.5s ease;
-    //     -webkit-transform: translateX(0);
-    //     transform: translateX(0);
-        
-    // }
 }
 
 .becord{
@@ -184,11 +74,6 @@ body{
     margin-left: 20px;
 }
 
-@media (min-width: 769px){
-    .hum{
-     display: none;
-    }
-}
 // header END-------------------------------------------------
 
 
