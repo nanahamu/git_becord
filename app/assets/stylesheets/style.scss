@@ -49,8 +49,17 @@ body{
 }
 
 @media (max-width: 768px){
+    .main{
+     padding: 180px 10px 30px 10px;
+    }
     
+    .header{
+        padding: 0;
+    }
     
+    .header-link{
+        font-size: 15px;
+    }
 }
 
 .becord{
