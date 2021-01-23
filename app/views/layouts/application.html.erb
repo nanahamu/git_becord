@@ -12,13 +12,26 @@
 
   <body>
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>$(function() {
+　    $('.hum').click(function() {
+        $(this).toggleClass('active');
+        $('.devise-nav').toggleClass('open');
+        
+         });
+      });
+    </script>
     <!--header START-->
     <header class="header">
       <div class="header-top">
         <h1 class="logo">
           <a href="/" class="header-link becord">becord</a>
         </h1>
+        <div class="hum">
+      　　<span></span>
+      　　<span></span>
+      　　<span></span>
+        </div>
         <div class="devise-nav">
           <% if user_signed_in? %>
             <div class="user-nav">
