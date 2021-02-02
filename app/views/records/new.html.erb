@@ -3,8 +3,8 @@
     <%= form_tag("/records", method: :post) do %>
       <h1>登録画面</h1>
       <div class="info">
-        <p class="title">食べた食材</p>
-        <input type="text" name="food" placeholder="(例)白菜">
+        <p class="title">食べた食材<span>(8文字以内)</span></p>
+        <input type="text" name="food" placeholder="(例)白菜" maxlength="8">
       </div>
       <div class="info">
         <p class="title">初めて食べた日</p>
