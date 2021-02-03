@@ -351,11 +351,13 @@ li::before {
     background-color: #ede0d4;
     border-radius: 15px;
     max-width: 1000px;
+    min-width: 360px;
     margin: 0 auto;
 }
 
 .record-table{
     max-width: 800px;
+    min-width: 330px;
 }
 .record-section th{
     color: #7f5539;
