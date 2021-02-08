@@ -147,9 +147,8 @@ body{
 
 // users START-------------------------------------------------
 .image{
-    image-orientation: 0deg;
-    width: 150px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
     background-size: cover;
     display: inline-block;
 }
