@@ -24,27 +24,21 @@ body{
     padding: 0 100px;
     height: 150px;
     box-shadow: 0 5px 10px 5px rgba(0,0,0,0.3);
-}
-
-
-.header-top{
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0 30px;
-    border-bottom: 1px solid #d8f3dc;
 }
 
-.global-nav{
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0 30px;
-}
+
+
+// .global-nav{
+//     height: 50px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin: 0;
+//     padding: 0 30px;
+// }
 
 .header-link{
     text-decoration: none;
@@ -423,7 +417,7 @@ li::before {
 
 @media (max-width: 768px){
     .main{
-         padding: 130px 10px 30px 10px;
+         padding: 40px 10px 30px 10px;
     }
     .main h1{
         font-size: 20px;
@@ -431,20 +425,30 @@ li::before {
     .header{
         padding: 0;
         height: 100px;
+        position: relative;
     }
     
-    .header-top{
-        height: 50px;
-        padding: 0 10px;
+    .devise-nav{
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
     }
+    // .header-top{
+    //     height: 50px;
+    //     padding: 0 10px;
+    // }
     
     .global-nav{
-        height: 50px;
-        padding: 0 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 5px;
     }
     
     .logo .becord{
         font-size: 30px;
+        position: absolute;
+        top: 10px;
+        left: 5px;
     }
     .header-link{
         font-size: 13px;
@@ -468,8 +472,7 @@ li::before {
         padding: 5px;
         margin-bottom: 30px;
     }
-    .foods-section-bar,
-    .baby-food-section-bar{
+    .foods-section-bar{
         font-size: 18px;
         margin-bottom: 20px;
     }
@@ -482,10 +485,10 @@ li::before {
     .record-table{
         width: 100%;
     }
-    .baby-food-area{
-        font-size: 13px;
-    }
-    .only-pc{
-        display: none;
-    }
+    // .baby-food-area{
+    //     font-size: 13px;
+    // }
+    // .only-pc{
+    //     display: none;
+    // }
 }

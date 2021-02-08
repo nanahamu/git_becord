@@ -14,14 +14,13 @@
     
     <!--header START-->
     <header class="header">
-      <div class="header-top">
         <h1 class="logo">
           <a href="/" class="header-link becord">becord</a>
         </h1>
-        <div class="hum">
-      　　<span></span>
-      　　<span></span>
-      　　<span></span>
+        <div class="global-nav">
+          <% if user_signed_in? %>
+            <%= link_to "#{current_user.baby_nickname}の離乳食記録", records_path, class: "header-link nav-item" %>
+          <% end %>
         </div>
         <div class="devise-nav">
           <% if user_signed_in? %>
@@ -36,14 +35,7 @@
             </div>
           <% end %>
         </div>
-      </div>
-      <div class="global-nav">
-        <%= link_to "栄養メモ", root_path, class: "header-link nav-item"  %>
-        <% if user_signed_in? %>
-          <%= link_to "#{current_user.baby_nickname}の離乳食記録", records_path, class: "header-link nav-item" %>
-        <% end %>
-        <%= link_to "離乳食", home_baby_food_path, class: "header-link nav-item" %>
-      </div>
+      
     </header>
     <!--header END-->
     
